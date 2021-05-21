@@ -1,4 +1,3 @@
-
 :root {
     --activeColor: #804CDE;
     --skyBlue: #3cb9fc;
@@ -209,7 +208,7 @@ body.modal-open #registerModal {
     justify-content: center;
 }
 
-button.close {
+.modal button.close {
     position: absolute;
     right: 20px;
     top: 20px;
@@ -220,7 +219,7 @@ button.close {
     opacity: 1;
     z-index: 999;
 }
-button.close:focus, button.close:hover {
+.modal button.close:focus, .modal button.close:hover {
     opacity: 1;
     outline: 0;
     box-shadow: none;
@@ -238,12 +237,12 @@ button.close:focus, button.close:hover {
     justify-content: center;
     background: transparent;
 }
-button.close:hover {
+.modal button.close:hover {
     color: #fff;
     opacity: 1;
 }
 
-button.close:after, button.close:before {
+.modal button.close:after, .modal button.close:before {
     background: #D4D4D4;
     content: '';
     display: block;
@@ -255,7 +254,7 @@ button.close:after, button.close:before {
     left: 0;
 }
 
-button.close:after {
+.modal button.close:after {
     transform: rotate(135deg);
 }
 .contactForm label,
@@ -638,6 +637,29 @@ div#message-error {
     color: #fff;
     font-size: 12px;
     margin: 0;
+}
+.alert {
+    position: fixed;
+    top: 90px;
+    right: 20px;
+    z-index: 999;
+    border-radius: 25px;
+    font-size: 12px;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0
+}
+.alert button.close {
+    margin-left: 10px;
+    outline: 0;
+    box-shadow: none;
+    border: 0;
+    padding: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
 }
 @keyframes fadeInUp {
     0% {
