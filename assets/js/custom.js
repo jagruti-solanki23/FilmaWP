@@ -57,7 +57,8 @@ $(function(){
         if($(window).width() > 1200){
             $("html, body").stop().animate({scrollTop: offsetTop + 100},850);
         } else {
-            $("html, body").stop().animate({scrollTop: offsetTop - 50},850).find('.navbar-collapse').collapse('hide');
+            $('.navbar-collapse').collapse('hide');
+            $("html, body").stop().animate({scrollTop: offsetTop},850);
         }
         e.preventDefault();
         });
