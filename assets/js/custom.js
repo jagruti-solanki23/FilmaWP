@@ -54,12 +54,11 @@ $(function(){
         menuItems.click(function (e) {
         var href = $(this).attr("href"),
         offsetTop = href === "#" ? 0 : $(href).offset().top - topMenuHeight + 1;
-        $("html, body").stop().animate(
-        {
-            scrollTop: offsetTop + 100
-        },
-        850
-        );
+        if($(window).width() > 1200){
+            $("html, body").stop().animate({scrollTop: offsetTop + 100},850);
+        } else {
+            $("html, body").stop().animate({scrollTop: offsetTop - 50},850).find('.navbar-collapse').collapse('hide');
+        }
         e.preventDefault();
         });
 

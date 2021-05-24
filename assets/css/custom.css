@@ -691,7 +691,7 @@ div#message-error {
    100% {
      transform:rotate(360deg)
    }
- }
+}
 @media (min-width: 1290px) {
     .container {
         max-width: 1290px;
@@ -773,6 +773,7 @@ div#message-error {
     }
     .getintouch h2 {
         margin: 0 0 22px;
+        font-size: 24px;
     }
     
     div#heroBanner {
