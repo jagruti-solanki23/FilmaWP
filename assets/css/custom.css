@@ -792,6 +792,9 @@ div#message-error {
         width: auto;
         text-align: center;
     }
+    section#forcontentcreators button.btn.btn-primary {
+        margin: 0 0 50px;
+    }
 }
 @media (min-width: 768px) {
     form#register {
