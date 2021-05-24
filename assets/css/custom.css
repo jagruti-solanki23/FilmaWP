@@ -787,6 +787,11 @@ div#message-error {
     .contactForm {
         max-width: 100%;
     }
+    span.quoteby {
+        margin: 0 auto;
+        width: auto;
+        text-align: center;
+    }
 }
 @media (min-width: 768px) {
     form#register {
