@@ -11,6 +11,7 @@ html, body {
     color: #fff;
     font-size: 1rem;
     letter-spacing: 1px;
+    background-color: #1D1C29;
     background: linear-gradient(180deg, #1D1C29 0%, #151518 49.79%, #151518 100%);
 }
 .nunito {
@@ -63,6 +64,7 @@ li.nav-item.opened .nav-link {
 }
 section {
     padding: 0 30px;
+    background-color: transparent;
 }
 section.main {
     padding-top: 110px;
@@ -72,7 +74,27 @@ section.main {
     flex: 100%
 }
 section.aboutfilmasections img {
-    /* max-height: 500px; */
+    max-height: 500px;
+    z-index: 9;
+    filter: drop-shadow(0px 0px 30px #000);
+}
+.withbackdrop {
+    position: relative;
+}
+.withbackdrop:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color: #211633;
+    filter: blur(127px);
+    z-index: 1;
+}
+#whatisfilma .withbackdrop:before {
+    filter: blur(75px);
 }
 p {
     color: #d4d4d4;
@@ -345,6 +367,12 @@ span.quoteby {
     margin: 40px 0 0 auto;
     text-align: center;
     max-width: 391px;
+    border: 2px solid transparent;
+    transition: border 0.3s;
+    background-repeat: no-repeat;
+}
+.teamblock:hover {
+    border: 2px solid var(--activeColor);
 }
 .teamblock.right {
     margin-left: 0;
@@ -359,13 +387,17 @@ span.quoteby {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 0 10px;
+    margin: 10px 0 25px;
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
+.profile-pic:hover {
+    transform: scale(1.1);
 }
 .profile-pic img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    margin: 40px 0 0;
 }
 .teamblock h3 {
     font-size: 18px;
